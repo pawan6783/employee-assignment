@@ -46,7 +46,7 @@ public class EmployeeDAOImpl implements EmployeeDAO{
 		// TODO Auto-generated method stub
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		Query<Employee> theQuery = currentSession.createQuery("from Employee order by lastName",Employee.class);
+		Query<Employee> theQuery = currentSession.createQuery("from Employee order by firstName",Employee.class);
 		List<Employee> employees = theQuery.getResultList();
 		return employees;
 	}
